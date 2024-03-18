@@ -1,0 +1,25 @@
+C:\Users\Dann\source\repos\formulario aprendices\bin\Debug\formulario aprendices.exe.config
+C:\Users\Dann\source\repos\formulario aprendices\bin\Debug\formulario aprendices.exe
+C:\Users\Dann\source\repos\formulario aprendices\bin\Debug\formulario aprendices.pdb
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices.csproj.AssemblyReference.cache
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\MainWindow.g.cs
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\App.g.cs
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices_MarkupCompile.cache
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices_MarkupCompile.lref
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\MainWindow.baml
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices.g.resources
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario_aprendices.Properties.Resources.resources
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices.csproj.GenerateResource.cache
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices.csproj.CoreCompileInputs.cache
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices.exe
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices.pdb
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\ventanaGuardar.g.cs
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\ventanaGuardar.baml
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\VentanaAprendicesGuardados.g.cs
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\VentanaAprendicesGuardados.baml
+C:\Users\Dann\source\repos\formulario aprendices\bin\Debug\EntityFramework.dll
+C:\Users\Dann\source\repos\formulario aprendices\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dann\source\repos\formulario aprendices\bin\Debug\EntityFramework.xml
+C:\Users\Dann\source\repos\formulario aprendices\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices_Content.g.cs
+C:\Users\Dann\source\repos\formulario aprendices\obj\Debug\formulario aprendices.csproj.CopyComplete

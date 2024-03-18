@@ -1,0 +1,115 @@
+﻿<Window x:Class="formulario_aprendices.VentanaAprendicesGuardados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:formulario_aprendices"
+        mc:Ignorable="d"
+        Title="VentanaAprendicesGuardados"
+        Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Button
+            Name="btnAtras"
+            HorizontalAlignment="Left"
+            Background="Transparent"
+            Click="BtnAtras_Click"
+            Width="55">
+            <Image Source="\images\flecha-izquierda.png" />
+        </Button>
+
+        <Label HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Content="APRENDICES SENA"
+               FontSize="30"
+               FontFamily="Gotham"
+               />
+
+        <DataGrid Grid.Row="1"
+                  Name="dataGridAprendices"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Auto"
+                  ItemsSource="{Binding datosAprendiz}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"  
+                  MouseDown="dataGridAprendices_MouseDown"
+          >
+
+            <DataGrid.ContextMenu >
+                <ContextMenu Name="cmOpciones">
+                    <MenuItem 
+                        Header="Eliminar"
+                        Click="MenuItem_Click_Eliminar">
+                        <MenuItem.Icon>
+                            <Image Source="\images\borrar.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    
+                    <Separator/>
+                    
+                    <MenuItem 
+                        Header="Modificar"
+                        Click="MenuItem_Click_Modificar">
+                        <MenuItem.Icon>
+                            <Image Source="\images\editar.png"/>
+                        </MenuItem.Icon>
+                        
+                    </MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Tipo de Documento"
+                    MinWidth="100"
+                    Width="*"
+                    Binding="{Binding tipoDeDocumento}">
+                </DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="Documento"
+                    MinWidth="100"
+                    Width="*"
+                    Binding="{Binding doc}">
+                </DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="Nombre"
+                    MinWidth="100"
+                    Width="auto"
+                    Binding="{Binding nombre}">
+                </DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="Edad"
+                    MinWidth="100"
+                    Width="*"
+                    Binding="{Binding edad}">
+                </DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="Genero"
+                    MinWidth="100"
+                    Width="*"
+                    Binding="{Binding genero}">
+                </DataGridTextColumn>
+                <DataGridTextColumn
+                    Header="Municipio"
+                    MinWidth="100"
+                    Width="*"
+                    Binding="{Binding ciudad}">
+                </DataGridTextColumn>
+                
+            </DataGrid.Columns>
+        </DataGrid> 
+        
+        
+        <Image Grid.Row="2"
+               Source="images\Logosimbolo-SENA-PRINCIPAL.png"
+               Width="100"/>
+
+
+    </Grid>
+    
+</Window>

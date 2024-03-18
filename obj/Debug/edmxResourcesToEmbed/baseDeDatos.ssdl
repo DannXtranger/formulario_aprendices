@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PracticaDataGridModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="aprendices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="documento" Type="numeric" Precision="10" Scale="0" />
+    <Property Name="fechaNacimiento" Type="date" />
+    <Property Name="idTipoDocumento" Type="int" />
+    <Property Name="idCiudad" Type="int" />
+    <Property Name="idGenero" Type="int" />
+  </EntityType>
+  <EntityType Name="ciudades">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_ciudad" Type="varchar" MaxLength="20" />
+    <Property Name="codPostal" Type="numeric" Precision="6" Scale="0" />
+  </EntityType>
+  <EntityType Name="generos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_genero" Type="varchar" MaxLength="20" />
+    <Property Name="abrev_genero" Type="nchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tiposDocumentos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_tipo_doc" Type="varchar" MaxLength="20" />
+    <Property Name="abrev_tipo_doc" Type="nchar" MaxLength="2" />
+  </EntityType>
+  <Association Name="FK__aprendice__idCiu__3D5E1FD2">
+    <End Role="ciudades" Type="Self.ciudades" Multiplicity="0..1" />
+    <End Role="aprendices" Type="Self.aprendices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudades">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="aprendices">
+        <PropertyRef Name="idCiudad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aprendice__idGen__3E52440B">
+    <End Role="generos" Type="Self.generos" Multiplicity="0..1" />
+    <End Role="aprendices" Type="Self.aprendices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="generos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="aprendices">
+        <PropertyRef Name="idGenero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_idTipoDocumento">
+    <End Role="tiposDocumentos" Type="Self.tiposDocumentos" Multiplicity="0..1" />
+    <End Role="aprendices" Type="Self.aprendices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tiposDocumentos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="aprendices">
+        <PropertyRef Name="idTipoDocumento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PracticaDataGridModelStoreContainer">
+    <EntitySet Name="aprendices" EntityType="Self.aprendices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ciudades" EntityType="Self.ciudades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="generos" EntityType="Self.generos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tiposDocumentos" EntityType="Self.tiposDocumentos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__aprendice__idCiu__3D5E1FD2" Association="Self.FK__aprendice__idCiu__3D5E1FD2">
+      <End Role="ciudades" EntitySet="ciudades" />
+      <End Role="aprendices" EntitySet="aprendices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aprendice__idGen__3E52440B" Association="Self.FK__aprendice__idGen__3E52440B">
+      <End Role="generos" EntitySet="generos" />
+      <End Role="aprendices" EntitySet="aprendices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_idTipoDocumento" Association="Self.FK_idTipoDocumento">
+      <End Role="tiposDocumentos" EntitySet="tiposDocumentos" />
+      <End Role="aprendices" EntitySet="aprendices" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

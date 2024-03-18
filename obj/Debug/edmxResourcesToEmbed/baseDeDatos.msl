@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PracticaDataGridModelStoreContainer" CdmEntityContainer="PracticaDataGridEntities">
+    <EntitySetMapping Name="aprendices">
+      <EntityTypeMapping TypeName="PracticaDataGridModel.aprendices">
+        <MappingFragment StoreEntitySet="aprendices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="idTipoDocumento" ColumnName="idTipoDocumento" />
+          <ScalarProperty Name="idCiudad" ColumnName="idCiudad" />
+          <ScalarProperty Name="idGenero" ColumnName="idGenero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ciudades">
+      <EntityTypeMapping TypeName="PracticaDataGridModel.ciudades">
+        <MappingFragment StoreEntitySet="ciudades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre_ciudad" ColumnName="nombre_ciudad" />
+          <ScalarProperty Name="codPostal" ColumnName="codPostal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="generos">
+      <EntityTypeMapping TypeName="PracticaDataGridModel.generos">
+        <MappingFragment StoreEntitySet="generos">
+          <ScalarProperty Name="abrev_genero" ColumnName="abrev_genero" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre_genero" ColumnName="nombre_genero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tiposDocumentos">
+      <EntityTypeMapping TypeName="PracticaDataGridModel.tiposDocumentos">
+        <MappingFragment StoreEntitySet="tiposDocumentos">
+          <ScalarProperty Name="abrev_tipo_doc" ColumnName="abrev_tipo_doc" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre_tipo_doc" ColumnName="nombre_tipo_doc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
